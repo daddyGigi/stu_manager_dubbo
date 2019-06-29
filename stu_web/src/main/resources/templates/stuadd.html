@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>欢迎来到添加</h2>
+<form action="/stu/insert" method="post">
+姓名：<input type="text" name="name"><br/>
+年龄：<input type="text" name="age"><br/>
+生日：<input type="date" name="birthday"><br/>
+所属班级：<select name="cid">
+            <option th:each="c:${classes}" th:value="${c.id}" th:text="${c.cname}"></option>
+        </select><br/>
+    <button>确认添加</button>
+</form>
+</body>
+</html>

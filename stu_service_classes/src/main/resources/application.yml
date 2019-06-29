@@ -1,0 +1,13 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///classes_dubbo
+    username: root
+    password: root
+dubbo:
+  application:
+    name: Class_Service
+  registry:
+    address: zookeeper://192.168.191.191:2181
